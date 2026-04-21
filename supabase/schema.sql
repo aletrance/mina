@@ -2,6 +2,9 @@
 -- Mine Vehicle Management - Supabase Schema
 -- ============================================
 
+-- Required extension for EXCLUDE constraints with UUID and date ranges
+CREATE EXTENSION IF NOT EXISTS btree_gist;
+
 -- Enums
 CREATE TYPE user_role AS ENUM ('super_admin', 'admin');
 CREATE TYPE vehicle_type AS ENUM ('auto', 'camioneta', 'camion');
